@@ -1,17 +1,5 @@
 #!/bin/bash
 # A small script to load a list of IPs into iptables
-# assumes that the IP addresses you wish to block are put in file /etc/iptablesv4.list
-# will add input arg later, also regex for comments on same line as address
-# this file can contain comments starting with ; or #
-# but these must not be included on the end of IP addresses
-# #comment allowed
-# ;comment allowed
-# 192.168.1.2 ;NOT ALLOWED
-# 192.168.1.2 #NOT ALLOWED
-# firewall blocks can be single IP, CIDR, or a RANGE
-# 192.168.1.1
-# 192.168.1.0/24
-# 192.168.1.1-192.168.1.10
 
 IPS_TO_BLOCK=/etc/iptablesv4.list
 
