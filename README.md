@@ -9,14 +9,12 @@ I made a couple of scripts for doing some simple sysadmin tasks.
  
  **Description:**
  
-A small script to load a list of IPs into iptables, assumes that the IP addresses you wish to block are put in file /etc/iptablesv4.list. This file can contain comments starting with ; or #, however you can not comment after the IP listing in this version. 
+A small script to load a list of IPs into iptables, assumes that the IP addresses you wish to block are put in file /etc/iptablesv4.list. The iplist file can contain comments starting with ; or #, however you can not comment after the IP listing in this version. 
 
  * #comment allowed
- * ;comment allowed
- * 192.168.101.1 ; NOT ALLOWED
  * 192.168.101.1 # NOT ALLOWED
 
-firewall blocks can be single IP, CIDR, or a RANGE
+The list can contain ipv4 in single IP, CIDR, or a ~~RANGE~~ formats
  * single ip:  192.168.101.7
  * CIDR: 192.168.101.0/24
  * ~~RANGE: 192.168.101.1-192.168.101.10~~ --src-range is not supported in most 1.4.x version of iptables
