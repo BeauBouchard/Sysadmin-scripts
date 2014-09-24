@@ -26,17 +26,16 @@ while read entries ;do
                 printf "%-20s %20s\n" $entries 'already referenced in iptable - skipping'
                 else
                 # is this CIDR, range or single IP?
-                        if [[ $entries =~ "-" ]]
-	                then
+                	#--src-range is not supported in most 1.4.x version of iptables, so i commented this out
+                        #if [[ $entries =~ "-" ]]
+	                #then
+	                        #printf "%-20s %20s %1s %1s\n" 'ADDING RULE:' 'iptables -A INPUT --src-range' $entries '-j DROP'
+	                        #iptables -A INPUT --src-range $entries -j DROP
+	                #else
 	                        
-	                        #--src-range
-	                        printf "%-20s %20s %1s %1s\n" 'ADDING RULE:' 'iptables -A INPUT --src-range' $entries '-j DROP'
-	                        iptables -A INPUT --src-range $entries -j DROP
-	                else
-	                        
-	                        #--CIDR or single
-	                        printf "%-20s %20s %1s %1s\n" 'ADDING RULE:' 'iptables -A INPUT -s' $entries '-j DROP'
-	                        iptables -A INPUT -s $entries -j DROP
-                        fi
+                        #--CIDR or single
+                        printf "%-20s %20s %1s %1s\n" 'ADDING RULE:' 'iptables -A INPUT -s' $entries '-j DROP'
+                        iptables -A INPUT -s $entries -j DROP
+                        #fi
                 fi
 done < $IPS_TO_BLOCK
