@@ -14,9 +14,8 @@ This is a script which will tweet you when something breaks... Tweet me When its
 
  Filename: tweetmewhenitsdown.pl
  
- Author: Beau Bouchard (Beau@beaubouchard.com) http://www.twitter.com/beaubouchard
+ Author: [@BeauBouchard](http://www.twitter.com/beaubouchard)
  
- Date: 07-12-2012
  
  Description: This will tweet me when my other script is down. 
  Its simple, and was a hack that works for me, but maybe some one else can make use it.
