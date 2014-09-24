@@ -3,27 +3,23 @@ I made a couple of scripts for doing some simple sysadmin tasks.
 
 ## raiseshields.sh
 
- Filename: raiseshields.sh
+ **Filename:** raiseshields.sh
  
- Author: [@BeauBouchard](http://www.twitter.com/beaubouchard)
+ **Author:** [@BeauBouchard](http://www.twitter.com/beaubouchard)
  
  **Description:**
  
-A small script to load a list of IPs into iptables, assumes that the IP addresses you wish to block are put in file /etc/iptablesv4.list. 
+A small script to load a list of IPs into iptables, assumes that the IP addresses you wish to block are put in file /etc/iptablesv4.list. This file can contain comments starting with ; or #, however you can not comment after the IP listing in this version. 
 
-Features for future: 
-will add input arg later, also regex for comments on same line as address. This file can contain comments starting with ; or #
  * #comment allowed
  * ;comment allowed
-
-however you can not comment after the IP listing in this version
- * 192.168.1.2 ;NOT ALLOWED
- * 192.168.1.2 #NOT ALLOWED
+ * 192.168.101.1 ; NOT ALLOWED
+ * 192.168.101.1 # NOT ALLOWED
 
 firewall blocks can be single IP, CIDR, or a RANGE
- * single ip: 192.168.1.1
- * CIDR: 192.168.1.0/24
- * ~~RANGE: 192.168.1.1-192.168.1.10~~ --src-range is not supported in most 1.4.x version of iptables
+ * single ip:  192.168.101.7
+ * CIDR: 192.168.101.0/24
+ * ~~RANGE: 192.168.101.1-192.168.101.10~~ --src-range is not supported in most 1.4.x version of iptables
 
 see the file [iptablesv4.conf](https://raw.githubusercontent.com/BeauBouchard/Sysadmin-scripts/master/etc/iptablesv4.conf) for an example of acceptable formats for an IP range and list.
 
