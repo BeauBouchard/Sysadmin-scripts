@@ -25,11 +25,12 @@ The list can contain ipv4 in single IP, CIDR, or a ~~RANGE~~ formats
 
 ## tweetmewhenitsdown.pl
 
- Filename: tweetmewhenitsdown.pl
+ **Filename:** tweetmewhenitsdown.pl
  
- Author: [@BeauBouchard](http://www.twitter.com/beaubouchard)
+ **Author:** [@BeauBouchard](http://www.twitter.com/beaubouchard)
  
- Description: This is a script which will tweet you when something breaks... Tweet me When its Down. 
+ **Description:**
+ This is a script which will tweet you when something breaks... Tweet me When its Down. 
  Its simple, and was a hack that works for me, but maybe some one else can make use it.
  Setup a twitter account, make it private, and follow it with your main account and turn on text alerts to get alerts.
  Pay attention, you will need to set these values below. Get them from here: https://dev.twitter.com/apps/new
