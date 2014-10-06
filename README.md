@@ -18,6 +18,16 @@ The list can contain ipv4 in single IP, CIDR, or a ~~RANGE~~ formats
  * single ip:  192.168.101.7
  * CIDR: 192.168.101.0/24
  * ~~RANGE: 192.168.101.1-192.168.101.10~~ --src-range is not supported in most 1.4.x version of [iptables](http://linux.die.net/man/8/iptables)
+ * 
+ 
+## logwriter
+
+ **Filename:** logwriter.pl
+ 
+ **Author:** [@BeauBouchard](http://www.twitter.com/beaubouchard)
+ 
+ **Description:**
+A simple log writing script for perl. Makes a new log for every day, and stores the messages for that day
 
 
 
